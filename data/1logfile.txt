@@ -1,0 +1,313 @@
+logfile opened: timestamp = 1460635578
+working directory = data/
+initializing GSL rngs...done!
+reading parms...
+run parameters read:
+	parz.noruns = 1
+	parz.starttime = 1980
+	parz.stoptime = 2010
+	parz.dt = 0.1
+	parz.S0 = 50000
+	parz.L0 = 50000
+	parz.D0 = 393
+	parz.T0 = 0
+population parameters read:
+	parz.fertage_alpha =1.8948
+	parz.fertage_beta =15.5236
+	parz.mf_deathratio =1
+	parz.AGEflag =1
+non-HIV TB parameters read in:
+	parz.beta = 6
+	parz.tbsurvn_k = 1.48098
+	parz.tbsurvn_L = 3.16935
+	parz.tbmortn = 0.696071
+	parz.r0 = 0.00323141
+	parz.r1 = 0.0656804
+	parz.smrfac = 1.00898
+	parz.fscale = 1.04405
+	parz.smrnmort = 0.295067
+	parz.cdrFN = none
+	parz.CDRn = 0.742402
+	parz.RxL = 0.5
+	parz.Rxp = 0.885442
+	parz.Rxpd = 0.248515
+unused	parz.Iprotn = 0
+unused	parz.IprotnS = 0
+	parz.Pprotn = 0.856765
+	parz.PprotnS = 0
+	parz.fSmr = 0.234063
+	parz.deltanSmr = 0.686189
+	parz.tbd_betan = 0.705723
+HIV parameters read:
+	parz.thiv_alpha = 2.30338
+	parz.thiv_beta = 13.4857
+	parz.mhiv_alpha = 2.3
+	parz.mhiv_beta = 25.9
+	parz.fhiv_alpha = 2.3
+	parz.fhiv_beta = 25.9
+	parz.fm_hivratio =1
+	parz.cd40 =1000
+HIV incidence parameters read:
+	parz.h_t0 = 1980
+	parz.h_peak = 2.00289
+	parz.h_peakiness = 2.44668
+	parz.h_peaktime = 1992.76
+	parz.h_theta = 0.511747
+	parz.decline2010 = 0
+	parz.hivincF = 0
+	parz.hivincFN = shared/sais.dat
+HIV/TB parameters read:
+	parz.hivdurf = 0.0985081
+	parz.f = 0.439986
+	parz.g = 1
+	parz.rho = 0.351878
+	parz.CDRp = 0.71276
+	parz.Rxpp = 0.880709
+	parz.Rxppd = 0.897424
+	parz.deltapSmr = 1
+	parz.tbd_betap = 0.642497
+	parz.H2Lhr = 1
+household parameters read:
+	parz.hhFLAG = 1
+	parz.nophh0 = 4.3
+	parz.hhmoverate = 0.0994435
+	parz.betaH = 3.15678
+	parz.hhhivRR = 9.41768
+		---
+intervention parameters read:
+	parz.ECFflag = 0
+	parz.ECFst = 2007
+	parz.ECFet = 2009.9
+	parz.CDRn2 = 0.8
+	parz.CDRp2 = 0.8
+	parz.tbd_betap2 = 0.3
+	parz.tbd_betan2 = 0.8
+		---
+	parz.Rxflag = 0
+	parz.Rxtime = 2013.5
+	parz.Rxp2 = 0.9
+	parz.Rxpp2 = 0.9
+		---
+	parz.IPTflag = 0
+	parz.IPTst = 2004
+	parz.IPTet = 2050
+	parz.IPTcov = 0.2
+	parz.IPTT = 1
+	parz.IPTart = 1
+	parz.IPTshiv = 0
+	parz.IPTcovP = 0.1
+	parz.IPTcovP2 = 0.8
+	parz.IPTcovPt1 = 2073.5
+	parz.IPTcovPt2 = 2015.5
+	parz.TSTspec = 0.6
+	parz.TSTsens = 0.6
+		---
+	parz.IPTpprot = 0
+	parz.IPTdurnN = 0.75
+	parz.IPTdurnP = 0.75
+	parz.IPThrN = 0.3858
+	parz.IPThrP = 0.728133
+	parz.IPThrA = 0.506716
+	parz.IPTcprobN = 0.6
+	parz.IPTcprobP = 0.1
+	parz.IPTmultiple = 0
+		---
+	parz.ARTflag = 1
+	parz.ARTst = 2004
+	parz.ARTrt = 0.5
+	parz.ARTcovmax = 0.6
+	parz.tbart = 1
+	parz.cd4h = 150
+	parz.cd4g = 350
+	parz.cd4g2 = 350
+	parz.ARTf = 0
+	parz.cd42a = 844.6
+	parz.cd42b = 2.07
+	parz.cd42c = 0.004
+	parz.expET = 0.5
+	parz.artTk = 7.2
+	parz.artTl = 366.7
+	parz.dCD4st = 2013.5
+	parz.dCD4et = 2020
+	parz.dCD4ep = 0.201
+	parz.art750 = 1
+	parz.artDR = 5
+	parz.artCU = 100
+		---
+	parz.HHIflag = 0
+	parz.HIPflag = 0
+	parz.HARflag = 0
+	parz.HHIst = 2007
+	parz.HHIet = 2009.9
+	parz.HHIcov = 1
+unused	parz.TSTu16sens = 1
+	parz.hhdOR = 2
+	parz.hhdF = 0.5
+	parz.deltaSmrI = 1
+		---
+	parz.tECFflag = 0
+	parz.tECFst = 2007
+	parz.tECFet = 2009.9
+	parz.tecfdOR = 1
+	parz.tecfdF = 1
+	parz.tECFhaz = 0.075
+file names for external data read:
+	parz.birthFN = shared/ZMbr.dat
+	parz.deathFN = shared/ZMesm.dat
+	parz.migrateFN = shared/ZMmr.dat
+	parz.amFN = shared/ZC3n.dat
+	parz.synpop0 = shared/Zpop.dat
+	parz.LTbFN = shared/UNbE0.dat
+	parz.abFN = shared/Abins.dat
+	parz.rpopFN = shared/rpopm.dat
+extra interventions:
+	parz.ART2TB = 0
+	parz.ART2TBst = 2010
+unused	parz.ART2HHhx = 0
+unused	parz.ARThxT = 0
+	parz.shivt = 100
+	parz.shivp = 0.05
+extra interventions:
+	parz.massart = 0
+	parz.artstart = 2007
+	parz.artT = 1
+	parz.artP = 0.7
+	parz.partrefusenik = 1
+periodic HIV screening:
+	parz.HIVflag = 0
+	parz.HIVst = 2012
+	parz.HIVet = 2030
+	parz.HIVT = 1
+	parz.HIVeff = 0.1
+periodic ACF interventions:
+	parz.PACFlag = 0
+	parz.PACFst = 2013.5
+	parz.PACFet = 2050
+	parz.PACFT = 1
+	parz.PACFeffsp = 0.2
+	parz.PACFeffsn = 0.1
+	parz.PACFeffart = 0.5
+	parz.PACFhivOR = 1
+resistance:
+	parz.Rflag = 0
+	parz.Rfrac0 = 0.1
+dynamic HIV:
+	parz.DHflag = 0
+HIVMAC extras:
+	parz.hivmac = 1
+	parz.artsig = 0.165
+	parz.pscale = 3.63095
+	parz.pn = 2.75162
+	parz.pmaxval = 0.0218496
+	parz.kq = 3.14448
+	parz.gg = 0.0197
+	parz.gi = 0.0197
+	parz.glrst = 2004
+	parz.nglstr = 0.0231394
+	parz.hseed = 0
+	parz.SQ = 1
+	parz.SQGLprop = 0.375
+switches:
+	parz.qlog = 1
+	parz.lightFLAG = 0
+	parz.snaps = 1
+	parz.bigSS = 1
+birthrates read...
+precomputing br splines...
+	done!
+deathrates read...
+precomputing dr splines...
+	done!
+relative population timeseries read...
+**rel pop misread!**
+precomputing relative population splines...
+	done!
+migration rates read...
+precomputing mr splines...
+	done!
+reading in the age-mixing data...
+	age dimensions match ok...
+reading in the baseline population state...
+warning: fishy gender at 2854
+warning: fishy gender at 2855
+warning: fishy gender at 2856
+warning: fishy gender at 2857
+warning: fishy gender at 2858
+warning: fishy gender at 2859
+warning: fishy gender at 2860
+warning: fishy gender at 2921
+warning: fishy gender at 2922
+warning: fishy gender at 2923
+warning: fishy gender at 2925
+warning: fishy gender at 2926
+warning: fishy gender at 13486
+warning: fishy gender at 13487
+warning: fishy gender at 13488
+warning: fishy gender at 13490
+warning: fishy gender at 13491
+ total population count = 25001
+ total household count = 5498
+...population data read-in completed!
+starting with seed=10000...
+initializeing  the baseline population state...
+ total population count = 25001
+ total household count = 5498
+hhmaxn=10,hhmaxm=11,hhmax=18
+	done!
+...population re-initialisation completed!
+	setting infection in community, (beta,d;S0,L0,D0,T0)=(6,0.00391462;18927,5957,97,19)
+HIV0=24
+GOT(SLDT):18966,5919,97,19
+	...commmunity done!
+16.7822 av, max 0
+0 overage
+0 resistant latent
+	opening demography results...
+	demog results file opened...
+mean no/hh (excl0hhs) = 4.51546
+	closing demog results...
+**error enacting background death!**
+mortality among ART defaulters (all time) = 24.3243
+starting population snapshot: size=96554...
+		: size hh=20884:
+...finished population snapshot:57448 alive!
+	opening demography results...
+	demog results file opened...
+mean no/hh (excl0hhs) = 4.50987
+	closing demog results...
+beginning to write results at writetime=1460635590
+opening endpoint file(6) ...
+EP(6) file opened...
+closing EP(6)...
+opening endpoint file EP1 ...
+EP1 file opened...
+closing EP1...
+opening endpoint file EP2 ...
+EP2 file opened...
+closing EP2...
+opening endpoint file EP3 ...
+EP3 file opened...
+closing EP3...
+opening endpoint file EPm ...
+EPm file opened...
+closing EPm...
+opening results file 1 ...
+results file opened...
+closing results 1...
+opening results file 2 ...
+results2 file opened...
+closing results2...
+opening results file 3 ...
+results3 file opened...
+closing results3...
+opening results file 4 ...
+results4 file opened...
+closing results4...
+opening results file 5 ...
+results5 file opened...
+closing results5...
+opening population snapshot ...
+ file opened population snapshot...
+closing population snapshot...
+freeing gsl rng...
+exiting...

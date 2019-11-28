@@ -1,0 +1,48 @@
+//run parameters: noruns, starttime, stoptime, dt, S0,L0,D0,T0; 
+1	1980	2010	0.1	50000	50000	609.830948418472	0
+ //population parameters: fertage_alpha, fertage_beta, mf_deathratio, AGEflag; 
+1.89480	15.52360	1	1
+ //non-HIV TB parameters:beta, tbsurvn_k, tbsurvn_L, tbmortn, r0,r1,smrfac, fscale, smrnmort, CDRfile; 
+5.36818349340168	1.47453336956387	3.30315769862791	0.705213500514068	0.00176504218151159	0.0666098529113401	1.01252205709694	1.05061453490096	0.297862626634352	none
+ //more non-HIV TB: CDRn,RxL,Rxp,Rxpd,Iprotn,IprotnS,Pprotn,PprotnS, fSmr, deltanSmr, tbd_betan; 
+0.730480090064183	0.489496608646703	0.689829761975585	0.24490495316853	0.0	0.0	0.480390116131772	0.0	0.233308492343463	0.716157348865177	0.257635116432275
+ //HIV parameters:thiv_alpha,thiv_beta,mhiv_alpha,mhiv_beta,fhiv_alpha,fhiv_beta,fm_hivratio, cd40; 
+2.32752339522417	13.4087913716297	2.3	25.9	2.3	25.9	1.0	1000
+ //HIV incidence parameters:h_t0,h_peak,h_peakiness, h_peaktime, h_theta, decline2010, hincF, hincFN; 
+1980	2.30813710284255	27.3641310073949	1997.52318706849	0.5709999905054	0	0	shared/sais.dat
+ //HIV-TB parameters: hivdurf, f,g,rho,CDRp,Rxpp, Rxppd,deltapSmr, tbd_betap, H2Lhr; 
+0.10043101606397	0.447308852349536	1	0.361649712006161	0.706619311779421	0.706045856546122	0.245873414272093	1.0	0.865741118404929	1.0
+ //household parameters: hhFLAG, nophh0, hhmoverate, betaH, hhhivRR; 
+1	4.3	0.5	0.729870000135268	16.08722250455065
+ //intervention parameters:ECFflag, ECFst, ECFet, CDRn2, CDRp2, tbd_betan2, tbd_betap2; 
+0	2007	2009.9	0.8	0.8	0.8	0.3
+ //Rx improvement: Rxflag, Rxtime, Rxp2, Rxpp2; 
+0	2013.5	0.9	0.9
+ //intervention parameters:IPTflag, IPTst, IPTet, IPTcov, IPTT, IPTart, IPTshiv, IPTcovP, IPTcovP2, IPTcovPt1, IPTcovPt2, TSTspec, TSTsens; 
+0	2004	2050	0.20	1.0	1	0	0.1	0.8	2073.5	2015.5	0.6	0.6
+ //IPT parameters: IPTpprot, IPTdurnN, IPTdurnP, IPThrN, IPThrP, IPThrA, IPTcprobN, IPTcpropP, IPTmultiple; 
+0.0	0.75	0.5	0.4	0.4	0.6	0.7	0.1	0
+ //intervention parameters: ARTflag, ARTst, ARTrt, ARTcov, tbart, cd4h, cd4g, cd4g2, ARTf, cd42a, cd42b, cd42c, expET, artTk, artTl, dCD4st, dCD4et, dCD4ep, art750, artDR, artCU ; 
+1	2004	.5	0.6	1.0	150	350	350	0.0	844.6	2.07	0.004	0.5	7.2	366.7	2013.5	2020	0.201	1	5	100
+ //intervention parameters:HHIflag, HIPflag, HARflag, HHIst, HHIet, HHIcov, TSTu16sens, hhdOR, hhdF, deltaSmrI;  
+1	0	0	2007	2009.9	1.0	1.0	2	2	10.0
+ //intervention parameters: tECFflag, tECFst, tECFet, tecfdOR, tecfdF, tECFhaz ; 
+1	2007	2009.9	2	2	5
+ //external data filenames: birthFN, deathFN, migrateFN, amFN, popfile, LTbFN, abFN, rpopFN; 
+shared/ZAbr.dat	shared/ZAesm.dat	shared/ZAmr.dat	shared/SC3n.dat	shared/Spop.dat	shared/UNbE0.dat	shared/Abins.dat	shared/rpopa.dat
+ //additional ART modifications:ART2TB, ART2TBst, ART2HHhx, ARThxT, shivt, shivp ; 
+0	2010	0	0	100	0.05
+ //TnT parameters: massart, artstart, artT, artP, partrefusenik; 
+0	2007	1	0.7	1.0
+ //HIV screening parameters: HIVflag, HIVst, HIVet, HIVT, HIVeff; 
+0	2012	2030	1	0.1
+ //PACF parameters: PACFlag, PACFst, PACFet, PACFT, PACFeffsp, PACFeffsn, PACFeffart, PACFhivOR; 
+0	2013.5	2050	1.0	0.2	0.1	0.5	1.0
+ //resistance parameters: Rflag, Rfrac0; 
+0	0.1
+ //dynamic HIV: DHflag, sbFracH, sbFracM, sbc1, sbc2, sbc3, sba1, sba2, sba3, sbA, lam, riA, riE, durA, durE, ARTeps, hiv0 ; 
+0	0.206	0.140	1.66	1.0	0.1	2.0	1.0	0.5	0.722	0.339	26.04	7.2	0.24	10.0	0.1	0.1
+ //HIVMAC parms: hivmac, artsig, pscale, pn, pmaxval, kq, gg, gi, glrst, nglstr, hseed, SQ, SQGLprop; 
+1	0.165	10.3001358455029	1.84630031931116	0.156418930411994	3.14448437488891	0.0197	0.0197	2004	0.023139409	0	1	0.375
+ //switches:qlog, light, snaps, bigSS; 
+1	0	1	1

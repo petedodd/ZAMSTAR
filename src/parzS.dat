@@ -1,0 +1,263 @@
+//run parameters: noruns, starttime, stoptime, dt, S0,L0,D0,T0;
+1	1980	2015	0.1	50000	50000	300	0
+//population parameters: fertage_alpha, fertage_beta, mf_deathratio, AGEflag;
+1.89480	15.52360	 1	1
+//non-HIV TB parameters:beta, tbsurvn_k, tbsurvn_L, tbmortn, r0,r1,smrfac, fscale, smrnmortOR;
+9.58185588972734	1.5 2.25  0.551	0.00333420371831205 0.9 1.0	0.986658668477647	1.0
+//more non-HIV TB: CDRn,RxL,Rxp,Rxpd,Iprotn,IprotnS,Pprotn,PprotnS, fSmr, deltanSmr, tbd_betan;
+0.72	0.5	0.7	0.25  0.0 0.0 0.640611135859971 0.0 0.23 0.7 0.365407341661247  
+//HIV parameters:thiv_alpha,thiv_beta,mhiv_alpha,mhiv_beta,fhiv_alpha,fhiv_beta,fm_hivratio, cd40;
+2.3	13.3	2.3	25.9	2.3	25.9	1.0	1000
+//HIV incidence parameters:h_t0,h_peak,h_peakiness, h_peaktime, h_theta, decline2010, hincF, hincFN;
+1980	0.0235 8.26423383 1999       0.5021383  0	1	shared/HIVincCFBL.dat
+//HIV-TB parameters:tbsurvp_k, tbsurvp_L,f,g,rho,CDRp,Rxpp, Rxppd,deltapSmr, tbd_betap, H2Lhr;
+2	0.45	0.45	0.999	0.618218522542129	0.72	0.7	0.25 1.0 0.365407341661247	1.0 
+//household parameters: hhFLAG, nophh0, hhmoverate, betaH, hhhivRR;
+1	4.3	    0.1	0.025	    6.0
+//intervention parameters:ECFflag, ECFst, ECFet, CDRn2, CDRp2, tbd_betan2, tbd_betap2;
+0	2007	2009.9 	0.8	0.8  0.8 	 0.3
+//Rx improvement: Rxflag, Rxtime, Rxp2, Rxpp2
+0	2012	0.9	0.9
+//intervention parameters:IPTflag, IPTst, IPTet, IPTcov, IPTT, IPTart, IPTshiv, IPTcovP;
+0	2010	2050	0.5    1	1  0   0.99
+//IPT parameters: IPTpprot, IPTdurnN, IPTdurnP, IPThrN, IPThrP, IPThrA, IPTcprobN, IPTcpropP, IPTmultiple;
+0.0 0.75    0.5    0.4 0.4 0.7 0.7 0.1 0 
+//intervention parameters: ARTflag, ARTst, ARTrt, ARTcov, tbart, cd4h, cd4g,cd4g2, ARTf, cd42a, cd42b, cd42c, expET, artTk, artTl, dCD4st, dCD4et, dCD4ep, art750, artDR, artCU ;
+1 	2004	.5	0.6 1.0	150	200	200	0.0	844.6	2.07	0.004 0.5	7.2	366.7	2015	2020	0.201 1	5	100
+//intervention parameters:HHIflag, HIPflag, HARflag, HHIst, HHIet, HHIcov, TSTu16sens, hhdOR, hhdF, deltaSmrI; 
+0	0	0	2007	2009.9	1.0 1.0	     2.0	    0.5	1.0
+//intervention parameters: tECFflag, tECFst, tECFet, tecfdOR, tecfdF, tECFhaz ;
+0	2007	2009.9	1.0  1.0     0.075
+//external data filenames: birthFN, deathFN, migrateFN, amFN, popfile, LTbFN, abFN; NB - Abins must be compatible AM;
+shared/ZAbr.dat	shared/ZAesm.dat	    shared/ZAmr.dat		shared/SC3n.dat	 shared/Spop.dat shared/UNbE0.dat	shared/Abins.dat
+//additional ART modifications:ART2TB, ART2TBst, ART2HHhx, ARThxT, shivt, shivp ;
+0	2010    0	0	100	0.05 
+//TnT parameters: massart, artstart, artT, artP, partrefusenik;
+0	2007	1	0.7	1.0
+//HIV screening parameters: HIVflag, HIVst, HIVet, HIVT, HIVeff;
+0   2012    2030    1   0.1
+//PACF parameters: PACFlag, PACFst, PACFet, PACFT, PACFeffsp, PACFeffsn, PACFeffart, PACFhivOR;
+0	2012	2050	1.0	0.5	0.5	0.5	1.0
+//resistance parameters: Rflag, Rfrac0;
+0	0.1
+//dynamic HIV: DHflag, sbFracH, sbFracM, sbc1, sbc2, sbc3, sba1, sba2, sba3, sbA, lam, riA, riE, durA, durE, ARTeps, hiv0 ;
+0	0.206	0.140	1.66	1.0	0.1	2.0	1.0	0.5	0.722	0.339	26.04	7.2	0.24	10.0	0.1	0.1
+//switches:qlog, light, snaps, bigSS;
+0 0 0 0
+
+//DICTIONARY/////////////////////////////////////////////////////////////////C3n2, HIV and smr +ty
+/////////////
+noruns -- number of runs
+starttime -- run start time 
+stoptime -- run end time
+dt -- time step [yr]
+S0 -- IC(semi deprecated)
+L0 -- IC(semi deprecated)
+D0 -- IC used as proportion
+T0 -- IC(semi deprecated)
+
+/////////////
+fertage_alpha -- Weibull fertility (deprecated)
+fertage_beta -- Weibull fertility (deprecated) 
+//female fertility by age, weibull, from UN pubn
+mf_deathratio -- male/female mortality ratio? deprecated
+AGEflag -- is age mixing on?
+
+/////////////
+beta -- effective contact rate [/yr]
+tbsurvn_k -- survival time parameter if  TB+HIV-
+tbsurvn_L -- survival time parameter if  TB+HIV- [yr]
+tbmortn -- HIV- TB mortality w/o Rx
+r0 -- reactivation rate HIV- [/yr]
+r1 -- fast activation rate HIV- [/yr]
+smrfac -- reduction in EV probability smr+ by age
+fscale -- scaling of EV probability fast by age
+smnrnmortOR -- OR for mortality if smr- and not Rx'd
+CDRn -- case detection prob TB+HIV-
+RxL -- duration of TB Rx [yr]
+Rxp -- probability of Rx success TB, i.e. clearance
+Rxpd -- probability of Rx ends in death *if* not cleared
+Iprotn -- protection from infection if L
+IprotnS -- protection from infection if S (via Rx)
+Pprotn -- protection from progression if L
+PprotnS -- protection from progression if S (via Rx)
+fSmr -- infectiousness if smr-
+deltanSmr -- OR in  CDR if smr- (HIV-)
+tbd_betan -- TB detection fraction of time
+
+/////////////
+thiv_alpha -- HIV surv, Weibull parm
+thiv_beta -- HIV surv, Weibull parm [yr]
+mhiv_alpha -- HIV male infection age, Weibull parm, UN pub
+mhiv_beta -- HIV male infection age, Weibull parm, UN pub [yr]
+fhiv_alpha -- HIV female infection age, Weibull parm, UN pub
+fhiv_beta -- HIV female infection age, Weibull parm, UN pub [yr]
+fm_hivratio -- HIV incidence gender bias
+
+///////////// HIV incidence shapes as in murray/salomon
+h_t0 -- HIVinc start time
+h_peak -- HIVinc height of peak [%/yr]
+h_peakiness -- HIVinc how tight is the peak
+h_peaktime -- HIVinc time of peak
+h_theta -- HIVinc proportion of peak at eqm
+decline2010 -- post-2010 decline in HIV incidence [%/yr]
+hincF -- use a data file for HIV incidence instead of parametric form?
+hincFN -- filename for above
+
+/////////////
+tbsurvp_k -- TB outcome weibull exp TB+HIV+
+tbsurvp_L -- TB outcome weibull tscl TB+HIV+ [yr]
+f -- factor reduction in prob of being smr + if HIV+
+g -- factor increase in susc to mtb inf if HIV+
+rho -- HIV progression ramp-up 
+CDRp --  case detection prob TB+HIV+
+Rxpp -- probability of Rx success TB HIV+, i.e. clearance
+Rxppd -- probability of Rx ends in death *if* not cleared, HIV+
+deltapSmr -- OR in CDR if smr- HIV+
+tbd_betap -- TB+HIV+ detection fraction of time
+H2Lhr -- HR for HIV infection in those LTBI+ (less strong than 1/g...)
+
+/////////////
+hhFLAG -- households on
+nophh0 -- mean no per hh (deprecated)
+hhmoverate -- hh movement rate [/yr]
+hhburnfactor -- for MCMC eqm (deprecated)
+betaH -- hh eff-contact rate 
+hhhivRR -- hh HIV clustering
+TSTu16sens --  sensitivity of TST in <16s (deprecated)
+
+/////////////
+ECFflag -- CDR change on 
+ECFst -- CDR change start time
+ECFet -- CDR change end time
+CDRn2 -- new CDR TB+HIV- 
+CDRp2 -- new CDR TB+HIV+ 
+tbd_betan2 -- new detection fraction time HIV-
+tbd_betap2 -- new detection fraction time HIV+
+
+/////////////
+Rxflag --  treatment improvement to happen (1=Y)? 
+Rxtime -- when to happen 
+Rxp2 -- new value Rxp 
+Rxpp2 -- new value Rxpp
+
+
+/////////////
+IPTpprot -- permanent partial protection: 0 is off
+IPTdurnN -- duration of IPT for HIV-
+IPTdurnP -- duration of IPT for HIV+
+IPThrN -- HR for protection for HIV-
+IPThrP -- HR for protection for HIV+/ART-
+IPThrA -- HR for protection for ART+
+IPTcprobN -- clearance probability at IPT end for HIV-
+IPTcpropP -- clearance probability at IPT end for HIV+
+IPTmultiple --  do we allow IPT to folk who've already had a course?
+
+//////
+IPTflag -- mass IPT intervention 
+IPTst --  start time, both for mass, and for HIV-related interventions
+IPTet --  end time
+IPTcov -- random coverage
+IPTT -- IPT period
+IPTart -- IPT to those starting ART
+IPTshiv -- IPT to those linking to care, this overrides above: someone shivIPTd doesn't get art re-IPTd 
+IPTcovP -- coverage of above 2
+
+/////////////
+ARTflag -- ART roll-out, also turns off some subsidiary ART items 
+ARTst -- start time
+ARTet -- end time
+ARTcov -- covereage
+ARTrt -- ART roll-out rapidity [yr]
+cd4t -- typical ART start CD4 - going to remove
+tbart -- prob that TB disease is like HIV
+cd4h -- upshift CD4 for HH individuals' ART
+cd4g -- guideline CD4 for ART
+cd4g2 -- guideline CD4 for ART after dCD4st
+cd40 -- initial CD4 count
+ARTf -- f for CD4 decline on ART
+cd42a -- initial CD4 level on ART fn
+cd42b -- initial CD4 level on ART fn
+cd42c -- initial CD4 level on ART fn
+expET -- exponent in ART's extra life
+artTk -- ART conditional start timing distn
+artTl -- ART conditional start timing distn
+dCD4st -- start time for linear upshift in CD4@ART
+dCD4et -- end time for linear upshift in CD4@ART from start time
+dCD4ep -- end point for linear upshift in median CD4@ART from 152
+art750 -- override for ART setting CD4 count to 750 initially
+artDR -- ART default rate in percent per year
+artCU -- ART catch-up rate in those below CD4st on ART introduction in percent per year
+
+/////////////
+HHIflag -- hh intervention on
+HIPflag -- hh IPT on
+HARflag -- hh ART on
+HHIst -- hh start time
+HHIet -- hh end time
+HHIcov -- hh coverage
+hhdOR -- OR for CDR if previous HH
+hhdF -- factor reduction in time to report if previous HH
+deltaSmrI -- odds ratio for intervention effect by smear status
+
+/////////////
+tECFflag -- `true' ECF flag
+tECFst -- `true' ECF start time
+tECFet -- `true' ECF end time
+tecfdOR -- `true' ECF OR
+tecfdF -- `true' ECF factor redn in report delay
+tECFhaz -- `true' ECF incidence rate [/yr]
+
+/////////////
+birthFN -- filename for birthrate data 
+deathFN -- filename for deathrate data 
+migrateFN -- filename for migration data 
+amFN -- filename for age-mixing data 
+popfile -- filename for synthetic population initially
+LTbFN -- lifetable filename
+abFN -- filename for age bins
+
+/////////////
+ART2TB -- coverage of ART to TB patients HIV+ regardless CD4
+ART2TBst -- start-time for ART to TB patients
+ART2HHhx -- flag ART to HH HIV+ w/ T-yr hx of TB
+ARThxT -- T for above
+shivt -- how much CD4 before ART does someone learn status
+shivp -- proportion ART start who learn status earlier
+
+/////////////
+massart -- TnT rounds flag
+artstart -- time for first round
+artT -- period for the rounds [yr]
+artP -- probability reached by UTT round
+partrefusenik -- on failure to reach, probability permanently unavailable to UTT
+
+/////////////
+HIVflag -- HIV screening flag 
+HIVst -- HIV screening start time 
+HIVet -- HIV screening end time
+HIVT -- HIV screening period
+HIVeff -- proportion HIV+ successfully linked to care
+
+/////////////
+PACFlag -- flag for periodic ACF 
+PACFst -- PACF start time
+PACFet -- PACF end time 
+PACFT -- PACF period 
+PACFeffsp -- PACF efficiency in Smr+
+PACFeffsn -- PACF efficiency in Smr-
+PACFeffart -- PACF efficiency in ART
+PACFhivOR -- OR for detection if hiv+/art-
+
+/////////////
+--
+
+
+/////////////
+//switches
+qlog -- quiet logging?
+light -- ditch time-series output
+snaps -- before and after household/gender snapshots
+bigSS -- BIG snapshot, population state dump at end
+
+//////////////////////////////////////////////////////////////////////////////

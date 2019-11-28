@@ -1,0 +1,2 @@
+set terminal postscript; set output "../plots/plot12.ps"; set yrange [0:100] ;   set xlabel "year"; set ylabel "%"; set key left top;
+plot "../data/results3.dat" u 1:(100*$6) title "propF" w li,"../data/results3.dat" u 1:(100*$7) title "propF HIV-" w li,"../data/results3.dat" u 1:(100*$8) title "propF HIV+" w li;

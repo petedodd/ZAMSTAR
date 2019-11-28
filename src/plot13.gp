@@ -1,0 +1,2 @@
+set terminal postscript; set output "../plots/plot13.ps"; set yrange [0:50] ;  set y2range [0:5];set ytics nomirror; set y2tics nomirror; set xlabel "year"; set ylabel "% HIV"; set y2label "% TB"; set key left top;
+plot "../data/results3.dat" u 1:(100*$4) title "TB prev HH" w p ax x1y2,"../data/results3.dat" u 1:(100*$9) title "HIV prev HH" w p ax x1y1, "../data/results3.dat" u 1:(100*$10) title "TB co-prevalence" w l lw 3 ax x1y2, "../data/results3.dat" u 1:(100*$11) title "HIV co-prevalence" w l lw 3 ax x1y1;

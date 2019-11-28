@@ -1,0 +1,222 @@
+logfile opened: timestamp = 1374074951
+working directory = src_rx/
+initializing GSL rngs...done!
+reading parms...
+run parameters read:
+	parz.noruns = 1
+	parz.starttime = 1980
+	parz.stoptime = 2015
+	parz.dt = 0.1
+	parz.S0 = 50000
+	parz.L0 = 50000
+	parz.D0 = 300
+	parz.T0 = 0
+population parameters read:
+	parz.fertage_alpha =1.8948
+	parz.fertage_beta =15.5236
+	parz.mf_deathratio =1
+	parz.AGEflag =1
+non-HIV TB parameters read in:
+	parz.beta = 9.58186
+	parz.tbsurvn_k = 1.5
+	parz.tbsurvn_L = 2.25
+	parz.tbmortn = 0.551
+	parz.r0 = 0.0033342
+	parz.r1 = 0.9
+	parz.smrfac = 1
+	parz.fscale = 0.986659
+	parz.smrnmort = 1
+	parz.cdrFN = 
+	parz.CDRn = 0.72
+	parz.RxL = 0.5
+	parz.Rxp = 0.7
+	parz.Rxpd = 0.25
+unused	parz.Iprotn = 0
+unused	parz.IprotnS = 0
+	parz.Pprotn = 0.640611
+	parz.PprotnS = 0
+	parz.fSmr = 0.23
+	parz.deltanSmr = 0.7
+	parz.tbd_betan = 0.365407
+HIV parameters read:
+	parz.thiv_alpha = 2.3
+	parz.thiv_beta = 13.3
+	parz.mhiv_alpha = 2.3
+	parz.mhiv_beta = 25.9
+	parz.fhiv_alpha = 2.3
+	parz.fhiv_beta = 25.9
+	parz.fm_hivratio =1
+	parz.cd40 =1000
+HIV incidence parameters read:
+	parz.h_t0 = 1980
+	parz.h_peak = 0.0235
+	parz.h_peakiness = 8.26423
+	parz.h_peaktime = 1999
+	parz.h_theta = 0.502138
+	parz.decline2010 = 0
+	parz.hivincF = 1
+	parz.hivincFN = shared/HIVincCFBL.dat
+HIV/TB parameters read:
+	parz.hivdurf = 2
+	parz.f = 0.45
+	parz.g = 0.45
+	parz.rho = 0.999
+	parz.CDRp = 0.618219
+	parz.Rxpp = 0.72
+	parz.Rxppd = 0.7
+	parz.deltapSmr = 0.25
+	parz.tbd_betap = 1
+	parz.H2Lhr = 0.365407
+household parameters read:
+	parz.hhFLAG = 1
+	parz.nophh0 = 4.3
+	parz.hhmoverate = 0.1
+	parz.betaH = 0.025
+	parz.hhhivRR = 6
+		---
+intervention parameters read:
+	parz.ECFflag = 0
+	parz.ECFst = 2007
+	parz.ECFet = 2009.9
+	parz.CDRn2 = 0.8
+	parz.CDRp2 = 0.8
+	parz.tbd_betap2 = 0.3
+	parz.tbd_betan2 = 0.8
+		---
+	parz.Rxflag = 0
+	parz.Rxtime = 2012
+	parz.Rxp2 = 0.9
+	parz.Rxpp2 = 0.9
+		---
+	parz.IPTflag = 0
+	parz.IPTst = 2010
+	parz.IPTet = 2050
+	parz.IPTcov = 0.5
+	parz.IPTT = 1
+	parz.IPTart = 1
+	parz.IPTshiv = 0
+	parz.IPTcovP = 0.99
+	parz.IPTcovP2 = 6.95323e-310
+	parz.IPTcovPt1 = 1.4822e-323
+	parz.IPTcovPt2 = 6.95323e-310
+	parz.TSTspec = 0
+	parz.TSTsens = 0
+		---
+	parz.IPTpprot = 0
+	parz.IPTdurnN = 0.75
+	parz.IPTdurnP = 0.5
+	parz.IPThrN = 0.4
+	parz.IPThrP = 0.4
+	parz.IPThrA = 0.7
+	parz.IPTcprobN = 0.7
+	parz.IPTcprobP = 0.1
+	parz.IPTmultiple = 0
+		---
+	parz.ARTflag = 1
+	parz.ARTst = 2004
+	parz.ARTrt = 0.5
+	parz.ARTcovmax = 0.6
+	parz.tbart = 1
+	parz.cd4h = 150
+	parz.cd4g = 200
+	parz.cd4g2 = 200
+	parz.ARTf = 0
+	parz.cd42a = 844.6
+	parz.cd42b = 2.07
+	parz.cd42c = 0.004
+	parz.expET = 0.5
+	parz.artTk = 7.2
+	parz.artTl = 366.7
+	parz.dCD4st = 2015
+	parz.dCD4et = 2020
+	parz.dCD4ep = 0.201
+	parz.art750 = 1
+	parz.artDR = 5
+	parz.artCU = 100
+		---
+	parz.HHIflag = 0
+	parz.HIPflag = 0
+	parz.HARflag = 0
+	parz.HHIst = 2007
+	parz.HHIet = 2009.9
+	parz.HHIcov = 1
+unused	parz.TSTu16sens = 1
+	parz.hhdOR = 2
+	parz.hhdF = 0.5
+	parz.deltaSmrI = 1
+		---
+	parz.tECFflag = 0
+	parz.tECFst = 2007
+	parz.tECFet = 2009.9
+	parz.tecfdOR = 1
+	parz.tecfdF = 1
+	parz.tECFhaz = 0.075
+file names for external data read:
+	parz.birthFN = shared/ZAbr.dat
+	parz.deathFN = shared/ZAesm.dat
+	parz.migrateFN = shared/ZAmr.dat
+	parz.amFN = shared/SC3n.dat
+	parz.synpop0 = shared/Spop.dat
+	parz.LTbFN = shared/UNbE0.dat
+	parz.abFN = shared/Abins.dat
+	parz.rpopFN = 
+extra interventions:
+	parz.ART2TB = 0
+	parz.ART2TBst = 2010
+unused	parz.ART2HHhx = 0
+unused	parz.ARThxT = 0
+	parz.shivt = 100
+	parz.shivp = 0.05
+extra interventions:
+	parz.massart = 0
+	parz.artstart = 2007
+	parz.artT = 1
+	parz.artP = 0.7
+	parz.partrefusenik = 1
+periodic HIV screening:
+	parz.HIVflag = 0
+	parz.HIVst = 2012
+	parz.HIVet = 2030
+	parz.HIVT = 1
+	parz.HIVeff = 0.1
+periodic ACF interventions:
+	parz.PACFlag = 0
+	parz.PACFst = 2012
+	parz.PACFet = 2050
+	parz.PACFT = 1
+	parz.PACFeffsp = 0.5
+	parz.PACFeffsn = 0.5
+	parz.PACFeffart = 0.5
+	parz.PACFhivOR = 1
+resistance:
+	parz.Rflag = 0
+	parz.Rfrac0 = 0.1
+dynamic HIV:
+	parz.DHflag = 0
+HIVMAC extras:
+	parz.hivmac = 0
+	parz.artsig = 0
+	parz.pscale = 0
+	parz.pn = 0
+	parz.pmaxval = 5.24238e-319
+	parz.kq = 6.66717e-315
+	parz.gg = 6.95327e-310
+	parz.gi = 6.95327e-310
+	parz.glrst = 6.59621e-315
+	parz.nglstr = 6.95327e-310
+	parz.hseed = 6.95327e-310
+	parz.SQ = 32767
+	parz.SQGLprop = 6.66717e-315
+switches:
+	parz.qlog = 1804274192
+	parz.lightFLAG = 32767
+	parz.snaps = 1804274344
+	parz.bigSS = 32767
+treatment outcomes:
+	parz.rxFN0 = //DICTIONARY/////////////////////////////////////////////////////////////////C3n2,
+	parz.rxFN1 = HIV
+	parz.rxFN2 = and
+	parz.rxFN3 = smr
+	parz.rxstart = 6.95323e-310
+	parz.rxrate = 6.81112e+199
+**failed to open birthrate.dat!**

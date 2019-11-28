@@ -1,0 +1,2 @@
+set terminal postscript; set output "../plots/plot07.ps"; set yrange [0:*]; set y2range [0:*];set ytics nomirror; set y2tics nomirror;set xlabel "year"; set ylabel "TB deaths per 100,000 of population year"; set y2label "HIV deaths per 100,000 of population year"; set key left top;
+plot "../data/results5.dat" u 1:(100000*$9) ti "TB" w li axis x1y1 ,"../data/results5.dat" u 1:(100000*$10) title "HIV" w li axis x1y2 ,"../data/results5.dat" u 1:(100000*$11) ti "TB/HIV" w li axis x1y1;

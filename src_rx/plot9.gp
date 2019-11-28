@@ -1,0 +1,2 @@
+set terminal postscript; set output "../plots/plot09.ps"; set xrange [1990:*]; set yrange [0:*]; set y2range [0:*];set ytics nomirror; set y2tics nomirror;set xlabel "year"; set ylabel "stratified TB incidence (HIV-) per 100,000 per year"; set y2label "stratified TB incidence (HIV+) per 100,000 per year"; set key left top;
+plot "../data/results5.dat" u 1:(100000*$12) ti "HIV -" w li axis x1y1 ,"../data/results5.dat" u 1:(100000*$13) title "HIV +" w li axis x1y2 ,"../data/results5.dat" u 1:(100000*$14) ti "ART" w li axis x1y2;
